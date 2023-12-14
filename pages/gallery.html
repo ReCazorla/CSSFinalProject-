@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabricio Fruet - Music Classes</title>
+    <!-- Link to the gallery CSS file -->
+    <link rel="stylesheet" href="../css/gallery.css">
+    <!-- Link to the website's favicon -->
+    <link rel="icon" type="icon" href="../images/favicon.ico">
+    <!-- Link to preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bangers&family=Bebas+Neue&family=Domine&family=Lora:ital,wght@1,500&family=Manrope&family=Merriweather:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
+    <!-- Link to Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Link to general CSS file -->
+    <link rel="stylesheet" href="../css/general.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu_desktop">
+            <nav>
+                <img src="../images/logo.png" alt="logo">
+
+                <ul>
+                    <!-- Navigation links for desktop -->
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="private_classes.html">Private Classes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="menu_mobile">
+            <img src="../images/logo.png" alt="logo">
+            <button class="botonMenu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <nav class="principal">
+                <ul>
+                    <!-- Navigation links for mobile -->
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="private_classes.html">Private Classes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Gallery</h1>
+
+        <div class="slideshow-container">
+            <!-- Slideshow slides -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="../images/agclass.jpeg">
+                <div class="text">ACUSTIC GUITAR CLASSES</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="../images/bclasses.jpeg">
+                <div class="text">BASS CLASSES</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="../images/cclasses.jpeg">
+                <div class="text">CELLO CLASSES</div>
+            </div>
+            <!-- Navigation arrows for slideshow -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <!-- Navigation dots for slideshow -->
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </main>
+    <footer>
+        <p>Fabricio Fruet © 2023 all rights reserved. Website design by Andreia Dourado / Danilo Mendes / Regina
+            Fruet
+            <!-- Social media icons -->
+            <a href="https://www.youtube.com/watch?v=1prweT95Mo0" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/yoyoma/?hl=pt" target="_blank"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+    <!-- JavaScript code for slideshow functionality -->
+    <script>var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

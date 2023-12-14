@@ -1,0 +1,115 @@
+/* CSS for the container holding instruments */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+/* CSS for individual musical instruments */
+.instrument {
+    text-align: center;
+    position: relative;
+    width: 31%;
+
+}
+
+/* CSS for instrument images */
+.instrument img {
+    width: 100%;
+    transition: transform 0.2s;
+    border-radius: 20px;
+
+}
+
+/* CSS for paragraphs inside instruments */
+.instrument p {
+    margin-top: 10px;
+}
+
+/* CSS for hovering effect on instrument images */
+.instrument:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* CSS for the 'about' section */
+.about {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* CSS for the testimonial container */
+.testimonial-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* CSS for heading 2 (h2) elements */
+h2 {
+    text-align: center;
+    color: #000;
+    font-size: 28px;
+    text-shadow: 1px 1px 2px rgb(133, 133, 133);
+    font-family: "lora", serif;
+}
+
+/* CSS for testimonial boxes */
+.testimonial {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    border-color: #000000;
+    border: 5px solid #000000;
+    border-radius: 20px 20px 20px;
+    width: 32%;
+    height: auto;
+}
+
+/* CSS for testimonial paragraphs */
+.testimonial p {
+    margin: 20px auto;
+    color: #000;
+    width: 90%;
+}
+
+/* CSS for student names */
+.student-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* CSS for icon elements inside testimonials */
+.testimonial i {
+    color: #FFD700;
+    font-size: 20px;
+    margin: 50px 2px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .instrument,
+    .testimonial {
+        width: 100%;
+    }
+
+    .testimonial-container {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        flex-direction: column;
+    }
+}

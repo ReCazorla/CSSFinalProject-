@@ -1,0 +1,59 @@
+/* Styles for the main container */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for the content wrapper */
+.wrapper {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'lora' serif;
+    height: 100%;
+    border-radius: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Styles for images inside the wrapper */
+.wrapper img {
+    width: 50%;
+    height: auto;
+    margin-top: 30px;
+}
+
+/* Styles for form elements (input and textarea) */
+.wrapper form textarea,
+.wrapper form input[type="text"],
+.wrapper form input[type="email"] {
+    width: 100%;
+    color: #000000;
+
+}
+
+/* Styles for form text */
+.wrapper form {
+    color: #ffffff;
+
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+    .wrapper img {
+        width: 100%;
+    }
+
+    /* Adjust wrapper layout for smaller screens */
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+}

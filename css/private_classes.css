@@ -1,0 +1,136 @@
+/* CSS for the container holding elements */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+/* CSS for images inside the container */
+.container img {
+  width: 350px;
+  height: 300px;
+}
+
+/* CSS for individual musical instrument sections */
+.instrument {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  border-color: #000000;
+  border: 5px solid #000000;
+  border-radius: 20px;
+  width: 30%;
+  height: auto;
+  padding: 20px;
+}
+
+/* CSS for images inside the instrument sections */
+.instrument img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+/* CSS for paragraphs inside instrument sections */
+.instrument p {
+  margin: auto;
+  align-items: center;
+  width: 90%;
+}
+
+/* CSS for the hover effect on instrument images */
+.instrument:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* CSS for proposal buttons */
+.proposal-button {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  display: inline-block;
+  margin: 20px 0px 0px 0px;
+}
+
+/* CSS for hover effect on proposal buttons */
+.proposal-button:hover {
+  background-color: #333333;
+  border-color: #333333;
+}
+
+/* CSS for the 'about' section */
+.about {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* CSS for Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0.2%;
+  top: 0%;
+  width: 99%;
+  height: 98%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* CSS for modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  max-width: 80%;
+  text-align: center;
+}
+
+/* CSS for close button in modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .instrument {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+}
+
+/* CSS to hide the proposal checkbox */
+.proposal-toggle {
+  display: none;
+}
