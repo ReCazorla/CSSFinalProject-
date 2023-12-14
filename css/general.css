@@ -47,6 +47,7 @@ h1 {
   border: 0;
   color: white;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .menu_mobile .botonMenu:focus {
